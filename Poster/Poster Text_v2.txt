@@ -1,0 +1,77 @@
+Název části: 
+Úvod a cíl práce
+
+Text části:
+Patchwork je desková hra dvou hráčů, ​
+ve které se hráči snaží pomocí kartiček, ​
+zvaných záplaty, pokrýt svůj hrací plán. ​
+Hráči přicházejí na tah podle speciální hodnoty zvané čas. ​
+
+Hra končí, jakmile obou hráčům dojde čas.​
+Cílem práce bylo implementovat hru, ​
+analyzovat její asymetrii a následně přidat počítačem řízeného hráče.​
+
+Název části:
+Implemetace
+
+Text části:
+Implementace byla provedena rozdělením logické částí a rozhraní hry. ​
+Veškerá komunikace, jak s uživatelem, tak s počítačem řízeným hráčem, ​
+je vedena přes toto rozhraní.​
+Program byl napsán v jazyce C++.
+
+Název části:
+GUI
+
+Text části:
+Pro vizuální stránku bylo zvoleno textové zobrazení, ​
+které je podpořeno barevným podtextem zobrazujícím správnost tahu.​
+Ovládání je hybridní, tlačítkové i klávesové. 
+
+Název části:
+Typy hráčů
+
+Text části:
+Byli implementováni následující počitačem řízení hráči
+
+List:
+	Náhodný - Náhodně vybírá tahy.​
+	Hladový - Vybírá aktuálně nejlepší tah.​
+	Minimaxový - Prohledává strom hry pro nejlepší tah.​
+	Monte Carlo tree search - Zkouší různé náhodné hry pro nalezení nejlepšího tahu. ​
+	Frekvenční - Počítá nejlepší tah z minulých her.
+
+Dále mohou mít hráči modifikace vzhledem k typu pokládání záplat na své hrací kartě. ​
+Byla implementována dvě různá pokládání. 
+První (jednoduché) hledá první volné místo, druhé (složité) se snaží zacelit díry.
+
+Název části:
+Asymetrie
+
+Text části:
+Pro lepší pochopení výsledků bylo otestováno, ​
+zda je hra nějakým způsobem asymetrická.​
+​
+Provedené testy naznačují, ​
+že hra preferuje hráče, který nezačíná.
+
+Název části:
+Výsledky hráčů
+
+Text části:
+Nejlepší byl hráč hladový. Je to překvapivý závěr, ​
+ale počet možných položení je moc velký a časově moc náročný na to,​
+aby měli Minimaxový a Monte Carlo tree search hráči možnost dobře prohledat strom hry.
+
+U frekvenčního hráče je vidět postupné zlepšení, ​
+které vychází z většího množství her, ze kterého hráč bere informace.​
+Graf vychází z hraní proti hladovému hráči.
+
+Název části:
+Závěr
+
+Text části:
+V práci jsme ukázali možnou implementaci deskové hry.​
+Analyzovali jsme, zda je výhodné začínat.  ​
+Nakonec jsme se zabývali různými typy hráčů a ukázali,​
+že za určitých podmínek mohou jednodušší algoritmy porážet algoritmy složité.
